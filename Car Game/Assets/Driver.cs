@@ -13,6 +13,7 @@ public class Driver : MonoBehaviour
 
     void Update()
     {
+        // Object Rotation
         transform.Rotate(0,0,steerSpd);
         transform.Translate(0,moveSpd,0);
     }
