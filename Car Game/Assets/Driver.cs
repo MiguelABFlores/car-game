@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
-    [SerializeField] float steerSpd = 0;
-    [SerializeField] float moveSpd = 0;
+    [SerializeField] float steerSpd = 1f;
+    [SerializeField] float moveSpd = 0.01f;
     void Start()
     {
         
@@ -13,10 +13,10 @@ public class Driver : MonoBehaviour
 
     void Update()
     {
-        float steerVal = Input.GetAxis("HAxis");
-        float moveVal = Input.GetAxis("VAxis");
+        float steerVal = Input.GetAxis("HAxis") * steerSpd;
+        float moveVal = Input.GetAxis("VAxis") * moveSpd;
         // Object Rotation
-        transform.Rotate(0,0,steerVal);
+        transform.Rotate(0,0,-steerVal);
         transform.Translate(0,moveVal,0);
     }
 }
