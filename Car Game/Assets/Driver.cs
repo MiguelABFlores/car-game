@@ -13,6 +13,8 @@ public class Driver : MonoBehaviour
 
     void Update()
     {
+        float steerVal = Input.GetAxis("HAxis");
+        float moveVal = Input.GetAxis("VAxis");
         // Object Rotation
         transform.Rotate(0,0,steerSpd);
         transform.Translate(0,moveSpd,0);
