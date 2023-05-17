@@ -13,10 +13,10 @@ public class Driver : MonoBehaviour
 
     void Update()
     {
-        float steerVal = Input.GetAxis("HAxis") * steerSpd;
+        float steerVal = -Input.GetAxis("HAxis") * steerSpd;
         float moveVal = Input.GetAxis("VAxis") * moveSpd;
         // Object Rotation
-        transform.Rotate(0,0,-steerVal);
+        transform.Rotate(0,0,steerVal);
         transform.Translate(0,moveVal,0);
     }
 }
