@@ -8,11 +8,11 @@ public class Collision : MonoBehaviour
         Debug.Log("Car crashed!");
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Car entered pink zone!");
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
+    void OnTriggerExit2D(Collider2D other) {
         Debug.Log("Car is exiting zone!");
     }
 }
