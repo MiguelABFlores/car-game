@@ -15,7 +15,7 @@ public class Collision : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        if(other.tag != "Residence"){
+        if(other.tag == "Residence"){
             Debug.Log("Car is exiting residence zone!");
         }
     }
