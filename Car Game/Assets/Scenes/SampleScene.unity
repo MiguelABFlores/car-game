@@ -1793,7 +1793,7 @@ MonoBehaviour:
     rgba: 4278255360
   noPackageColor:
     serializedVersion: 2
-    rgba: 4294902015
+    rgba: 4294967295
   destroyDelay: 0.5
 --- !u!1 &1262164326
 GameObject:

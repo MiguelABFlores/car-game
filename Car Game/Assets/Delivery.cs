@@ -15,6 +15,7 @@ public class Delivery : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        //When picking up package change color and boolean value
         if (other.tag == "Package" && !hasPackage){
             Debug.Log("Package picked up.");
             hasPackage = true;
@@ -22,6 +23,7 @@ public class Delivery : MonoBehaviour
             spriteRenderer.color = hasPackageColor;
         }
 
+        //When delivering package change color and boolean value
         if (other.tag == "Customer" && hasPackage){
             Debug.Log("Package delivered.");
             hasPackage = false;
