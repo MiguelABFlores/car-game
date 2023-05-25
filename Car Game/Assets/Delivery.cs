@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void OnCollisionEnter2D(Collision2D other) {
+        Debug.Log("");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Package"){
+            Debug.Log("Package picked up.");
+        }
         
     }
 }

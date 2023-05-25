@@ -9,10 +9,14 @@ public class Collision : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Car entered residence zone!");
+        if(other.tag == "Residence"){
+            Debug.Log("Car entered residence zone!");
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        Debug.Log("Car is exiting residence zone!");
+        if(other.tag != "Residence"){
+            Debug.Log("Car is exiting residence zone!");
+        }
     }
 }
