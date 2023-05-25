@@ -8,15 +8,15 @@ public class Collision : MonoBehaviour
         Debug.Log("Car crashed!");
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Residence"){
-            Debug.Log("Car entered residence zone!");
-        }
-    }
+    // void OnTriggerEnter2D(Collider2D other) {
+    //     if(other.tag == "Residence"){
+    //         Debug.Log("Car entered residence zone!");
+    //     }
+    // }
 
-    void OnTriggerExit2D(Collider2D other) {
-        if(other.tag == "Residence"){
-            Debug.Log("Car is exiting residence zone!");
-        }
-    }
+    // void OnTriggerExit2D(Collider2D other) {
+    //     if(other.tag == "Residence"){
+    //         Debug.Log("Car is exiting residence zone!");
+    //     }
+    // }
 }
